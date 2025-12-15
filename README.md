@@ -1,3 +1,6 @@
+# Snaplabs Edition (by Rodry)
+Latest template is available here: [Ludus ADCS - Snaplabs v1.0 - 12.2025](https://dashboard.snaplabs.io/templates/9a606a2c-a1e8-46cf-bf0c-d23a264dc74c)
+
 # Ansible Role: ADCS (Ludus)
 
 An Ansible Role that installs [ADCS](https://learn.microsoft.com/en-us/windows-server/identity/ad-cs/active-directory-certificate-services-overview) on Windows Server and optionally configures [Certified Preowned](https://specterops.io/wp-content/uploads/sites/3/2022/06/Certified_Pre-Owned.pdf) templates.
