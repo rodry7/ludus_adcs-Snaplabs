@@ -1,0 +1,46 @@
+- hosts: ca
+  roles:
+    - badsectorlabs.ludus_adcs
+  vars:
+    ludus_adcs_domain: "snaplabs.local"
+    ludus_domain_netbios_name: "SNAPLABS"
+    ludus_domain_fqdn_tail: "snaplabs.local"
+    ludus_adcs_ca_host: server
+    ludus_adcs_dc: "DC.snaplabs.local"
+    ludus_adcs_domain_username: "domain_admin@snaplabs.local"
+    ludus_adcs_domain_password: P@ssword1
+    ludus_adcs_ca_common_name: SNAPLABS-CA
+    ludus_adcs_ca_web_enrollment: true
+    ludus_adcs_esc1: true
+    ludus_adcs_esc2: true
+    ludus_adcs_esc3: true
+    ludus_adcs_esc3_cra: true
+    ludus_adcs_esc4: true
+    ludus_adcs_esc5: true
+    ludus_adcs_esc6: true
+    ludus_adcs_esc7: true
+    ludus_adcs_esc8: true
+    ludus_adcs_esc9: true
+    ludus_adcs_esc11: true
+    ludus_adcs_esc13: true
+    ludus_adcs_esc15: true
+    ludus_adcs_esc16: true
+    # Rename templates (optional)
+    ludus_adcs_template_display_names:
+        ESC1: "WorkstationAuth"
+        ESC2: "DocEncryption"
+        ESC3: "EmployeeCert"
+        ESC3_CRA: "EnrollmentAgent"
+        ESC4: "LegacyApp"
+        ESC7_CERTMGR: "Certmgr"
+        ESC9: "ServerAuth"
+        ESC13: "Smartcard"
+    ludus:
+    - hostname: DC
+      domain:
+        fqdn: snaplabs.local
+        role: primary-dc
+    - hostname: server
+      domain:
+        fqdn: snaplabs.local
+        role: ca
